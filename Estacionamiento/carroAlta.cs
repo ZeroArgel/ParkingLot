@@ -1,62 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Estacionamiento
+﻿namespace Estacionamiento
 {
+    using System;
+    using System.Windows.Forms;
     public partial class carroAlta : Form
     {
-        String Placas, Modelo, Marca, Color;
+        /// <summary>
+        /// Variable to save plate of car.
+        /// </summary>
+        internal string Plate { get; set; }
+        /// <summary>
+        /// Variable to save model of car.
+        /// </summary>
+        internal string Model { get; set; }
+        /// <summary>
+        /// Variable to save brand of car.
+        /// </summary>
+        internal string CarBrand { get; set; }
+        /// <summary>
+        /// Variable to save color of car.
+        /// </summary>
+        internal string Color { get; set; }
 
-        public string datplacas()
+        public carroAlta() => InitializeComponent();
+
+        #region BtnSave_Click
+        /// <summary>
+        /// Function to save car in parking lot.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnSave_Click(object sender, EventArgs e)
         {
-            return Placas;
-        }
+            Plate = txtPlate.Text;
+            Model = txtModel.Text;
+            CarBrand = txtCarBrand.Text;
+            Color = txtColor.Text;
 
-        public string datmodelo()
-        {
-            return Modelo;
-        }
-
-        public string datmarca()
-        {
-            return Marca;
-        }
-        public string datcolor()
-        {
-            return Color;
-        }
-
-
-        public carroAlta()
-        {
-            InitializeComponent();
-        }
-
-        private void carroAlta_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAlta_Click(object sender, EventArgs e)
-        {
-            Placas = txtplacas.Text;
-            Modelo = txtmodelo.Text;
-            Marca = txtmarca.Text;
-            Color = txtcolor.Text;
-
-            txtplacas.Clear();
-            txtmodelo.Clear();
-            txtmarca.Clear();
-            txtcolor.Clear();
+            txtPlate.Clear();
+            txtModel.Clear();
+            txtCarBrand.Clear();
+            txtColor.Clear();
 
             Close();
         }
+        #endregion
     }
 }

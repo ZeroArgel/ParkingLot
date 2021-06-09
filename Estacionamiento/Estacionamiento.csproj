@@ -56,12 +56,8 @@
     <Compile Include="Estacionamiento.Designer.cs">
       <DependentUpon>Estacionamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Costo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Costo.Designer.cs">
-      <DependentUpon>Costo.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Cars.cs" />
+    <Compile Include="Models\Parkings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="carroAlta.resx">
@@ -69,9 +65,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estacionamiento.resx">
       <DependentUpon>Estacionamiento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Costo.resx">
-      <DependentUpon>Costo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -99,6 +92,7 @@
   <ItemGroup>
     <None Include="Resources\Coche.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
