@@ -1,8 +1,9 @@
-﻿namespace Estacionamiento
+﻿using System;
+using System.Windows.Forms;
+
+namespace ParkingLot
 {
-    using System;
-    using System.Windows.Forms;
-    public partial class carroAlta : Form
+    public partial class Register : Form
     {
         /// <summary>
         /// Variable to save plate of car.
@@ -21,7 +22,7 @@
         /// </summary>
         internal string Color { get; set; }
 
-        public carroAlta() => InitializeComponent();
+        public Register() => InitializeComponent();
 
         #region BtnSave_Click
         /// <summary>
@@ -31,15 +32,15 @@
         /// <param name="e"></param>
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            Plate = txtPlate.Text;
-            Model = txtModel.Text;
-            CarBrand = txtCarBrand.Text;
-            Color = txtColor.Text;
+            Plate = TxtPlate.Text;
+            Model = TxtModel.Text;
+            CarBrand = TxtCarBrand.Text;
+            Color = TxtColor.Text;
 
-            txtPlate.Clear();
-            txtModel.Clear();
-            txtCarBrand.Clear();
-            txtColor.Clear();
+            TxtPlate.Clear();
+            TxtModel.Clear();
+            TxtCarBrand.Clear();
+            TxtColor.Clear();
 
             Close();
         }
