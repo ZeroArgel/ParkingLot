@@ -1,9 +1,10 @@
-﻿namespace Estacionamiento.Models
+﻿using System;
+
+namespace ParkingLot.Models
 {
-    using System;
-    public class Parkings
+    public class ParkingLots
     {
-        public Parkings(Cars car, DateTimeOffset parkingLotDateIn)
+        public ParkingLots(Cars car, DateTimeOffset parkingLotDateIn)
         {
             Car = car;
             ParkingLotDateIn = parkingLotDateIn;
@@ -23,6 +24,6 @@
         /// <summary>
         /// Save how much pay for each hour.
         /// </summary>
-        public int ToPayForHr { get; } = 8;
+        internal int ToPayForHr = 8;
     }
 }

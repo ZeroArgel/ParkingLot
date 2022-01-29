@@ -1,4 +1,4 @@
-﻿namespace Estacionamiento.Models
+﻿namespace ParkingLot.Models
 {
     public class Cars
     {
@@ -13,7 +13,7 @@
         public string CarBrand { get; set; }
         public string Model { get; set; }
         public string Color { get; set; }
-        public int PayInit { get; } = 12;
+        internal int PayInit = 12;
         public int ToPay { get; set; }
     }
 }
