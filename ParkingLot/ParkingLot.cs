@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using ParkingLot.Models;
-using ZAExtensions;
+using ZAExtensions.zCore.Validations;
 
 namespace ParkingLot
 {
