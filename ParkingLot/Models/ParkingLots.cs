@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace ParkingLot.Models
 {
     public class ParkingLots

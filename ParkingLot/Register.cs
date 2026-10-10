@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.ComponentModel;
 
 namespace ParkingLot
 {
@@ -8,18 +7,22 @@ namespace ParkingLot
         /// <summary>
         /// Variable to save plate of car.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         internal string Plate { get; set; }
         /// <summary>
         /// Variable to save model of car.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         internal string Model { get; set; }
         /// <summary>
         /// Variable to save brand of car.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         internal string CarBrand { get; set; }
         /// <summary>
         /// Variable to save color of car.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         internal string Color { get; set; }
 
         public Register() => InitializeComponent();
